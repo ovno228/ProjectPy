@@ -127,4 +127,3 @@ if site:
     obj.showInfo()
 else:
     print("Жодної інформації не отримано")
-
