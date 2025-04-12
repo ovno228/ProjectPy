@@ -10,12 +10,6 @@ class Product:
     def __str__(self):
         return f"{self.name} — ${self._price:.2f}"
 
-    def __bool__(self):
-        return self.name != "" and self._price > 0
-
-    def __len__(self):
-        return len(self.name)
-
     def get_price(self):
         return self._price
 
@@ -51,17 +45,18 @@ class CoinParser:
                     name = name_tag.text.strip()
                     price = float(price_tag.text.replace('$', '').replace(',', '').strip())
                     prod = Product(name, price)
-                    if prod:
-                        self.products.append(prod)
+                    self.products.append(prod)
                 except:
                     continue
         return True if self.products else False
 
     def showInfo(self):
-        print("\nТОП-10 криптовалют:")
+        print("ТОП-10 криптовалют:")
         print("-" * 40)
-        for i, p in enumerate(self.products, 1):
+        i = 1
+        for p in self.products:
             print(f"{i}. {p}")
+            i += 1
 
     def buyProduct(self):
         try:
@@ -76,7 +71,6 @@ class CoinParser:
         except ValueError:
             print("❗ Введіть число")
 
-# --- Основна логіка за шаблоном ---
 
 url = "https://www.coingecko.com/"
 obj = CoinParser(url)
