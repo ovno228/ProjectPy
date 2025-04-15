@@ -1,7 +1,7 @@
 # !!!!!!! Я НЕ МОГУ ПРОВЕРИТЬ РАБОТАЕТ ЛИ КОД, У МЕНЯ НЕ РАБОТАЕТ МОДУЛЬ ЧТО БЫ ЕГО ПРОВЕРИТЬ!!!!
 # !!!!!!! КОГДА Я ПЫТАЮСЬ ЗАПУСТИТЬ КОД ВЫДАЁТ СЛЕДУЮЩУЮ ОШИБКУ:
 # Traceback (most recent call last):
-#   File "C:\Users\Ростислав\PycharmProjects\pythonProject2\Dzz.py", line 53, in <module>
+#   File "C:\Users\Ростислав\PycharmProjects\pythonProject2\Dzz.py"
 #     import requests
 # ModuleNotFoundError: No module named 'requests'
 
